@@ -149,7 +149,8 @@ function utils.follow_link(link)
     end
   else
     vim.cmd("lcd " .. vim.fn.expand "%:p:h")
-    vim.cmd("e " .. link)
+    require("configs.org-multi").execute()
+
 
     local bufnr = vim.api.nvim_get_current_buf()
 
